@@ -59,13 +59,14 @@ Claude Desktop utilise la configuration par défaut (`~/.claude`) sauf réglage 
 
 ## 6. Vérification par l'agent (facultatif mais recommandé)
 
-Sans session interactive, vérifiez que le mod se charge et que ses tests passent :
+Sans session interactive, vérifiez que la copie installée est bien formée :
 
 ```bash
 claude plugin validate ~/.claude/plugins/marketplaces/reecrire/plugins/reecrire
 ```
 
-Le chemin exact de la copie installée est affiché par `claude plugin list` (ligne « Read from » ou « Installed at »).
+(Avec un `CLAUDE_CONFIG_DIR`, remplacez `~/.claude` par ce dossier. La copie effectivement chargée se trouve sous
+`~/.claude/plugins/cache/reecrire/reecrire/<version>/`.)
 
 ## Dépannage
 
