@@ -49,7 +49,8 @@ claude plugin install reecrire@reecrire
 ```
 
 C'est une installation neuve de la version 1.1.0. Ensuite, ouvrez une **nouvelle** session Claude Code. Pour
-Desktop, **redémarrez l'application** et ouvrez une nouvelle discussion dans l'onglet Code. Détails, vérification et dépannage : [INSTALL.md](INSTALL.md).
+Desktop, **redémarrez l'application** et ouvrez une nouvelle discussion dans l'onglet Code.
+Détails, vérification et dépannage : [INSTALL.md](INSTALL.md).
 
 ## Désinstallation
 
