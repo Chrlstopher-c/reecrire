@@ -21,7 +21,8 @@ remplace votre brouillon dans le champ : vous relisez, puis vous envoyez. Rien n
 ## Comment la réécriture est faite
 
 - Modèle : Haiku 5.5, effort `high`, lancé en flux par un `claude -p` isolé (sans réglages, hooks, MCP, outils
-  ni session enregistrée). Si `claude` n'est pas dans le PATH, appel simple sans flux, même rendu animé à l'arrivée.
+  ni session enregistrée). Si `claude` n'est pas dans le PATH, appel simple sans flux : le texte se tape dans le
+  champ une fois la réponse complète.
 - Contexte : les **50 derniers échanges texte** entre vous et le modèle, **sans aucun résultat d'outil**
   (lectures de fichiers, recherches, sorties de commandes) ni contexte injecté par des hooks. Chaque message est
   limité à 3000 caractères. Le contexte sert seulement à comprendre à quoi le brouillon fait référence ;
@@ -34,7 +35,8 @@ remplace votre brouillon dans le champ : vous relisez, puis vous envoyez. Rien n
 
 ## Prérequis
 
-- Claude Code **2.1.292 ou plus récent** (`claude --version`). Les mods sont actifs par défaut.
+- Claude Code **2.1.296 ou plus récent** (`claude --version`), version sur laquelle la 1.1.0 est testée. Les mods
+  sont actifs par défaut.
 - Accès au modèle Haiku 5.5 (`claude-haiku-5-5`) avec votre abonnement ou votre clé API. Chaque clic consomme un
   appel Haiku sur votre quota.
 - Pour Desktop : la version de Claude Desktop avec l'onglet Code (les mods y fonctionnent comme dans le terminal).
@@ -46,14 +48,14 @@ claude plugin marketplace add Chrlstopher-c/reecrire
 claude plugin install reecrire@reecrire
 ```
 
-Ensuite, ouvrez une **nouvelle** session Claude Code. Pour Desktop, **redémarrez l'application** et ouvrez une
-nouvelle discussion dans l'onglet Code. Détails, vérification et dépannage : [INSTALL.md](INSTALL.md).
+C'est une installation neuve de la version 1.1.0. Ensuite, ouvrez une **nouvelle** session Claude Code. Pour
+Desktop, **redémarrez l'application** et ouvrez une nouvelle discussion dans l'onglet Code. Détails, vérification et dépannage : [INSTALL.md](INSTALL.md).
 
-## Mise à jour / désinstallation
+## Désinstallation
 
 ```bash
-claude plugin marketplace update reecrire && claude plugin update reecrire@reecrire
 claude plugin uninstall reecrire@reecrire
+claude plugin marketplace remove reecrire
 ```
 
 ## Développement

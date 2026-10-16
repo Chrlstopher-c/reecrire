@@ -38,7 +38,8 @@ Validé par Chris en CLI et dans Claude Desktop (16/10).
 | Aucun redessin de la bande pendant la frappe | Desktop recrée les boutons natifs à chaque dessin (survol, clic perdu) | 16/10 |
 
 ## Contexte non-évident
-- Requiert Claude Code ≥ 2.1.292 : `prompt` en tableau de blocs n'est accepté qu'à partir de cette version.
+- Requiert Claude Code ≥ 2.1.296 (version testée de la 1.1.0 : `Client`, `ui.message`, `process.spawn`) ; `prompt`
+  en tableau de blocs exige au minimum 2.1.292.
 - `$.clock.every` renvoie un objet `{ cancel() }` alors que les types déclarent une fonction : le mod gère les deux.
 - Le cache de prompt ne s'active sans doute pas (bloc fixe sous le seuil minimal de Haiku) ; impact négligeable.
 - L'extension VS Code n'affiche pas la bande au-dessus du prompt.
@@ -48,8 +49,8 @@ Validé par Chris en CLI et dans Claude Desktop (16/10).
 - Kit de test : un hook `on(...)` d'un test s'enregistre avant le premier appel à `$`, jamais dans une boucle.
 
 ## Prochaines étapes
-1. Recueillir le retour de la première installation par un tiers (lien envoyé le 16/10) ; Mathéo doit mettre à
-   jour vers 1.1.0.
+1. Recueillir le retour de la première installation par un tiers (lien envoyé le 16/10) : Mathéo n'avait pas
+   encore installé, son agent installe directement la 1.1.0 via INSTALL.md.
 2. Ajouter un éditeur ou ajuster un style si un modèle cible réécrit mal.
 
 ## Points en suspens
