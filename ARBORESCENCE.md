@@ -12,9 +12,11 @@
 - `docs/FONCTIONNEMENT.md` — déroulé d'un clic, rôle des fichiers, comment adapter
 - `plugins/reecrire/.claude-plugin/plugin.json` — manifeste du plugin (nom, version)
 - `plugins/reecrire/hooks/hooks.json` — point d'entrée du module de hooks
-- `plugins/reecrire/hooks/register.tsx` — bouton, Annuler, indicateurs, commande, appel Haiku, remplissage du champ
+- `plugins/reecrire/hooks/register.tsx` — bouton, Arrêter/Annuler, commande, flux Haiku et repli, remplissage du champ
 - `plugins/reecrire/hooks/request.ts` — sélection de l'historique, construction de la requête, extraction
 - `plugins/reecrire/hooks/families.ts` — détection de l'éditeur du modèle, bibliothèque de styles
-- `plugins/reecrire/hooks/progress.ts` — barre de chargement et compteur de secondes
+- `plugins/reecrire/hooks/stream.ts` — lancement de Haiku en flux (`claude -p`), lecture des événements
+- `plugins/reecrire/hooks/live.tsx` — panneau animé (module de surface) : titre irisé, onde, compteurs
+- `plugins/reecrire/hooks/fx.ts` — effets purs : couleurs, partie lisible du flux, compteurs
 - `plugins/reecrire/hooks/reecrire.test.tsx` — tests du mod
 - `scripts/ci/local-ci.sh` — validation des manifestes et tests, rejoué en local et en CI

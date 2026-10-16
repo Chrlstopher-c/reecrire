@@ -33,7 +33,7 @@ Rules:
 
 Return only the rewritten prompt, inside <prompt></prompt> tags.`
 
-export type TextBlock = { text: string; cache?: boolean }
+export type TextBlock = { text: string; cache?: true }
 
 // Bloc statique (consignes + bibliothèque de styles) mis en cache ; seule la fin change d'un clic à l'autre.
 export function buildRequest(draft: string, history: readonly Turn[], model: string, family: Family) {
@@ -51,12 +51,12 @@ ${draft}
 Rewrite the draft for the target model, following the <style id="${family.id}"> entry of the style library.`
   const prompt: TextBlock[] = [{ text: library, cache: true }, { text: task }]
 
-  return { prompt }
+  return { prompt, system: library, user: task }
 }
 
 export function extractPrompt(reply: string): string | null {
   const m = /<prompt>([\s\S]*?)<\/prompt>/.exec(reply)
-  const text = (m ? m[1] : reply).trim()
+  const text = (m?.[1] ?? reply).trim()
 
   return text === '' ? null : text
 }

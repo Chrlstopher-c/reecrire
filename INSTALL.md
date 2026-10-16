@@ -2,7 +2,7 @@
 
 Ce fichier s'adresse à l'agent qui installe le mod pour son utilisateur. Suivez les étapes dans l'ordre, lancez
 chaque commande vous-même, et vérifiez chaque résultat avant de passer à la suivante. Le but : le bouton
-« Réécrire » visible au-dessus du prompt dans le terminal **et** dans l'onglet Code de Claude Desktop.
+« ✦ Reprompting » visible au-dessus du prompt dans le terminal **et** dans l'onglet Code de Claude Desktop.
 
 ## 1. Vérifier la version
 
@@ -55,7 +55,7 @@ Claude Desktop utilise la configuration par défaut (`~/.claude`) sauf réglage 
 - **Terminal** : quitter la session en cours et en ouvrir une nouvelle. Une session déjà ouverte ne charge pas le mod.
 - **Claude Desktop** : quitter complètement l'application (pas seulement fermer la fenêtre), la relancer, puis
   ouvrir une **nouvelle** discussion dans l'onglet Code.
-- Le bouton `r: Réécrire` apparaît au-dessus du champ de saisie. Il suffit de taper un brouillon et de cliquer.
+- Le bouton `✦ Reprompting` apparaît au-dessus du champ de saisie. Il suffit de taper un brouillon et de cliquer.
 
 ## 6. Vérification par l'agent (facultatif mais recommandé)
 

@@ -1,6 +1,6 @@
-# reecrire — bouton « Réécrire » pour Claude Code et Claude Desktop
+# reecrire — bouton « Reprompting » pour Claude Code et Claude Desktop
 
-Un mod Claude Code qui ajoute un bouton **Réécrire** juste au-dessus du champ de saisie. Vous tapez (ou dictez)
+Un mod Claude Code qui ajoute un bouton **Reprompting** juste au-dessus du champ de saisie. Vous tapez (ou dictez)
 votre demande comme elle vient, vous cliquez, et Haiku 5.5 la réécrit au format de prompting du modèle que vous
 utilisez : balises XML et contraintes justifiées pour Claude, sections markdown pour OpenAI, etc. Le texte réécrit
 remplace votre brouillon dans le champ : vous relisez, puis vous envoyez. Rien ne part sans vous.
@@ -9,16 +9,19 @@ remplace votre brouillon dans le champ : vous relisez, puis vous envoyez. Rien n
 
 ## Ce que ça fait
 
-- **Bouton `Réécrire`** dans la bande au-dessus du prompt, dans le terminal et dans l'onglet Code de Claude Desktop.
-- **`Annuler`** remet votre brouillon d'origine.
-- **Indicateur de progression** pendant la génération : barre animée et compteur de secondes au-dessus du champ,
-  et la ligne sous le champ indique « Haiku 5.5 réécrit ton prompt ».
+- **Bouton `✦ Reprompting`** (dégradé corail → violet) dans la bande au-dessus du prompt, dans le terminal et dans
+  l'onglet Code de Claude Desktop.
+- **Réécriture en direct** : pendant que Haiku réfléchit, une onde irisée et le nombre de jetons de réflexion ;
+  dès qu'il écrit, le prompt se tape en direct dans le champ de saisie, pendant que la bande garde son animation
+  (titre en arc-en-ciel, onde, nombre de caractères) jusqu'à la fin. À la fin, « ✓ Réécrit pour <modèle> ».
+- **`Arrêter`** pendant la génération, **`Annuler`** ensuite pour remettre votre brouillon d'origine.
 - **Commande `/reecrire <texte>`** : même chose, en partant du texte tapé après la commande.
-- **Au clavier dans le terminal** : `Ctrl+X Tab` pour aller dans la bande, puis `r` (réécrire) ou `u` (annuler).
+- **Au clavier dans le terminal** : `Ctrl+X Tab` pour aller dans la bande, flèches puis Entrée.
 
 ## Comment la réécriture est faite
 
-- Modèle : Haiku 5.5, effort `high`.
+- Modèle : Haiku 5.5, effort `high`, lancé en flux par un `claude -p` isolé (sans réglages, hooks, MCP, outils
+  ni session enregistrée). Si `claude` n'est pas dans le PATH, appel simple sans flux, même rendu animé à l'arrivée.
 - Contexte : les **50 derniers échanges texte** entre vous et le modèle, **sans aucun résultat d'outil**
   (lectures de fichiers, recherches, sorties de commandes) ni contexte injecté par des hooks. Chaque message est
   limité à 3000 caractères. Le contexte sert seulement à comprendre à quoi le brouillon fait référence ;

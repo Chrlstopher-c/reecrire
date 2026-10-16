@@ -6,12 +6,15 @@
 
 ## À faire (priorité)
 - [ ] Vérifier dans Desktop sur macOS (seul Linux testé)
+- [ ] Vérifier que `claude` est dans le PATH de Desktop sur macOS ; sinon le repli sans flux s'active
 
 ## Backlog
 - [ ] Styles Sonnet 5.5 / Haiku 5.5 à enrichir si Anthropic publie leurs prompts système
 - [ ] Mesurer si le cache de prompt s'active (usage.cache_read_input_tokens) ; sinon envisager de l'enlever
 
 ## Terminé
+- [x] v1.1.0 : bouton « ✦ Reprompting », flux en direct dans le champ, animation de la bande (16/10)
+- [x] Survol qui clignotait sur Desktop : plus aucun redessin de la bande en boucle (16/10)
 - [x] Bouton Réécrire + Annuler + /reecrire (16/10)
 - [x] Filtrage du contexte : 50 échanges texte, sans résultats d'outils (16/10)
 - [x] Barre de progression + indication sous le champ (16/10)

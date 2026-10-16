@@ -1,7 +1,7 @@
 {
   "name": "reecrire",
-  "version": "1.0.0",
-  "description": "Bouton « Réécrire » au-dessus du prompt : Haiku 5.5 réécrit votre brouillon au format de prompting du modèle actif (CLI + Desktop)",
+  "version": "1.1.0",
+  "description": "Bouton « Reprompting » au-dessus du prompt : Haiku 5.5 réécrit votre brouillon en direct dans le champ, au format de prompting du modèle actif (CLI + Desktop)",
   "author": { "name": "Chrlstopher-c" },
   "homepage": "https://github.com/Chrlstopher-c/reecrire",
   "license": "MIT"

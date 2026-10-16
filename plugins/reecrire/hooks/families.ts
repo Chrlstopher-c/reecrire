@@ -96,3 +96,13 @@ export function detectFamily(model: string): Family {
 
   return { id, vendor: hit ? hit[2] : 'unknown', guide: GUIDES[id] }
 }
+
+// « claude-opus-5-5 » → « Opus 5.5 » ; un id inconnu est rendu tel quel.
+export function prettyModel(model: string): string {
+  const m = /(opus|sonnet|haiku|fable)[-\s]?(\d+)(?:[-.](\d+))?/i.exec(model)
+  const word = m?.[1]
+  if (!m || !word) return model.replace(/\[.*\]$/, '')
+  const name = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+
+  return m[3] ? `${name} ${m[2]}.${m[3]}` : `${name} ${m[2]}`
+}
