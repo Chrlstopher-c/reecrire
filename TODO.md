@@ -11,12 +11,15 @@
 ## Backlog
 - [ ] Styles Sonnet 5.5 / Haiku 5.5 à enrichir si Anthropic publie leurs prompts système
 - [ ] Mesurer si le cache de prompt s'active (usage.cache_read_input_tokens) ; sinon envisager de l'enlever
+- [ ] À la prochaine version (1.2) : remettre une commande de mise à jour dans README et INSTALL.md (retirée tant
+  que personne n'a de version antérieure installée)
 
 ## Terminé
 - [x] v1.1.0 : bouton « ✦ Reprompting », flux en direct dans le champ, animation de la bande (16/10)
 - [x] Survol qui clignotait sur Desktop : plus aucun redessin de la bande en boucle (16/10)
+- [x] INSTALL.md et README : installation neuve de la 1.1.0, rejouée dans une config vierge (16/10)
 - [x] Bouton Réécrire + Annuler + /reecrire (16/10)
 - [x] Filtrage du contexte : 50 échanges texte, sans résultats d'outils (16/10)
-- [x] Barre de progression + indication sous le champ (16/10)
+- [x] Barre de progression + indication sous le champ (16/10, remplacées par l'animation en 1.1.0)
 - [x] Styles Anthropic Claude 5 (guide officiel + prompts système observés) (16/10)
 - [x] Repo public, INSTALL.md pour agent, CI verte (16/10)

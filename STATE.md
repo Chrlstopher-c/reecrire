@@ -25,6 +25,11 @@ Validé par Chris en CLI et dans Claude Desktop (16/10).
   frappe). Corrigé : panneau `Client` qui interroge le mod par `ui.message`, `onPress` fixe + hook `ui.press`,
   visage de la mascotte déplacé dans un module `Client` (mod mascotte, hors repo).
 
+## Ce qui a été fait — doc d'installation (16/10/2026, fin de journée)
+- Mathéo n'avait pas encore installé : INSTALL.md décrit une installation neuve de la 1.1.0 (Claude Code ≥ 2.1.296,
+  `claude` dans le PATH, version attendue), rejouée telle quelle dans une configuration vierge depuis GitHub.
+- README aligné : mêmes prérequis et commandes, section « Mise à jour » retirée.
+
 ## Décisions prises
 | Décision | Raison | Date |
 |----------|--------|------|
