@@ -1,0 +1,14 @@
+{
+  "name": "reecrire",
+  "owner": {
+    "name": "Chrlstopher-c"
+  },
+  "description": "Mod Claude Code « reecrire » : réécriture du prompt par Haiku 5.5 au format du modèle actif",
+  "plugins": [
+    {
+      "name": "reecrire",
+      "source": "./plugins/reecrire",
+      "description": "Bouton « Réécrire » au-dessus du prompt : Haiku 5.5 réécrit le brouillon au format du modèle actif"
+    }
+  ]
+}
